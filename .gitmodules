@@ -4,3 +4,6 @@
 [submodule ".submodules/ohmyzsh"]
 	path = .submodules/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule ".config/wofi/dracula"]
+	path = .config/wofi/dracula
+	url = https://github.com/dracula/wofi.git
