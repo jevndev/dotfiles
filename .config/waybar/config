@@ -1,0 +1,91 @@
+{
+    "layer": "bottom",
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "battery",
+        "pulseaudio",
+        "network"
+    ],
+    "ipc": true,
+    "id": "bar",
+    "spacing": 0,
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": [
+                "<span size=\"xx-large\"></span>",
+                "<span size=\"xx-large\"></span>",
+                "<span size=\"xx-large\"></span>"
+            ]
+        },
+        "format-muted": "<span size=\"xx-large\">󰝞</span>"
+    },
+    "battery": {
+        "interval": 5,
+        "format-icons": {
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ],
+            "charging": [
+                "󰢜",
+                "󰂅",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ],
+            "warning": [
+                "󰂃"
+            ],
+            "critical": [
+                "󱃍"
+            ]
+        },
+        "format-discharging": "{icon}",
+        "format-charging": "<span size=\"xx-large\">{icon}</span>",
+        "fromat-critical": "<span size=\"xx-large\">{icon}</span>",
+        "format-warning": "{icon}",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
+    "network": {
+        "format-ethernet": "<span size=\"xx-large\">󰈀</span>",
+        "format-wifi": "<span size=\"xx-large\">{icon}</span>",
+        "format-disconnected": "<span size=\"xx-large\"></span>",
+        "format-icons": {
+            "wifi": [
+                "󰤯",
+                "󰤢",
+                "󰤥",
+                "󰤨"
+            ]
+        }
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    }
+}
