@@ -1,0 +1,6 @@
+alias lg="lazygit"
+alias cd="z"
+alias ls="exa"
+alias tree="exa --tree"
+alias cat="batcat"
+alias htop="btop"
