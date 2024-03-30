@@ -12,6 +12,10 @@ if [ -f ~/.path ]; then
     . ~/.path
 fi
 
+if [ -f ~/.theme/enable_all.zsh ]; then
+    . ~/.theme/enable_all.zsh
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
