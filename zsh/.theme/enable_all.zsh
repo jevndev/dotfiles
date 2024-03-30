@@ -1,0 +1,1 @@
+. ~/.theme/exa_theme.zsh
