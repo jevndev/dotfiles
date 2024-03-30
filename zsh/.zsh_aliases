@@ -5,3 +5,7 @@ alias la="exa -g --long --all --group --color=always"
 alias tree="exa -g --tree --color=always"
 alias cat="batcat"
 alias htop="btop"
+
+if [ "$TERM" = "xterm-kitty" ]; then
+    alias ssh="kitty +kitten ssh"
+fi
