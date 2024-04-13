@@ -1,0 +1,24 @@
+{
+	"main": {
+		"prefix": "main",
+		"body": [
+			"def main():",
+			"\t${0:...}",
+			"",
+			"if __name__ == \"__main__\":",
+			"\tmain()"
+		]
+	},
+	"typevar": {
+		"prefix": "typevar",
+		"body": [
+			"$1 = typing.TypeVar(\"$1\", ${2:bound=None}, ${3:contravariant=False}, ${4:covariant=False})"
+		]
+	},
+	"newtype": {
+		"prefix": "newtype",
+		"body": [
+			"$1 = typing.NewType(\"$1\", ${2:})"
+		]
+	}
+}

@@ -1,0 +1,61 @@
+{
+    //  /$$$$$$$$       /$$ /$$   /$$
+    // | $$_____/      | $$|__/  | $$
+    // | $$        /$$$$$$$ /$$ /$$$$$$    /$$$$$$   /$$$$$$
+    // | $$$$$    /$$__  $$| $$|_  $$_/   /$$__  $$ /$$__  $$
+    // | $$__/   | $$  | $$| $$  | $$    | $$  \ $$| $$  \__/
+    // | $$      | $$  | $$| $$  | $$ /$$| $$  | $$| $$
+    // | $$$$$$$$|  $$$$$$$| $$  |  $$$$/|  $$$$$$/| $$
+    // |________/ \_______/|__/   \___/   \______/ |__/
+    "workbench.colorTheme": "Dracula Soft",
+    "explorer.confirmDragAndDrop": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDelete": false,
+    "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
+    "editor.fontLigatures": true, // => != ===
+    "editor.inlayHints.enabled": "on",
+    "editor.formatOnSave": true,
+    "zenMode.hideLineNumbers": false,
+    "editor.snippetSuggestions": "top",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always"
+    },
+    "editor.trimAutoWhitespace": true,
+    //  /$$
+    // | $$
+    // | $$        /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$
+    // | $$       |____  $$| $$__  $$ /$$__  $$| $$  | $$ |____  $$ /$$__  $$ /$$__  $$ /$$_____/
+    // | $$        /$$$$$$$| $$  \ $$| $$  \ $$| $$  | $$  /$$$$$$$| $$  \ $$| $$$$$$$$|  $$$$$$
+    // | $$       /$$__  $$| $$  | $$| $$  | $$| $$  | $$ /$$__  $$| $$  | $$| $$_____/ \____  $$
+    // | $$$$$$$$|  $$$$$$$| $$  | $$|  $$$$$$$|  $$$$$$/|  $$$$$$$|  $$$$$$$|  $$$$$$$ /$$$$$$$/
+    // |________/ \_______/|__/  |__/ \____  $$ \______/  \_______/ \____  $$ \_______/|_______/
+    //                                /$$  \ $$                     /$$  \ $$
+    //                               |  $$$$$$/                    |  $$$$$$/
+    //                                \______/                      \______/
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.gotoDefinitionInStringLiteral": true,
+    //  /$$$$$$$$             /$$                                   /$$
+    // | $$_____/            | $$                                  |__/
+    // | $$       /$$   /$$ /$$$$$$    /$$$$$$  /$$$$$$$   /$$$$$$$ /$$  /$$$$$$  /$$$$$$$   /$$$$$$$
+    // | $$$$$   |  $$ /$$/|_  $$_/   /$$__  $$| $$__  $$ /$$_____/| $$ /$$__  $$| $$__  $$ /$$_____/
+    // | $$__/    \  $$$$/   | $$    | $$$$$$$$| $$  \ $$|  $$$$$$ | $$| $$  \ $$| $$  \ $$|  $$$$$$
+    // | $$        >$$  $$   | $$ /$$| $$_____/| $$  | $$ \____  $$| $$| $$  | $$| $$  | $$ \____  $$
+    // | $$$$$$$$ /$$/\  $$  |  $$$$/|  $$$$$$$| $$  | $$ /$$$$$$$/| $$|  $$$$$$/| $$  | $$ /$$$$$$$/
+    // |________/|__/  \__/   \___/   \_______/|__/  |__/|_______/ |__/ \______/ |__/  |__/|_______/
+    "convertToAsciiArt.favoriteFont": "Big Money-ne"
+    //  /$$   /$$                                           /$$                     /$$
+    // | $$  | $$                                          | $$                    | $$
+    // | $$  | $$ /$$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
+    // | $$  | $$| $$__  $$ /$$_____/ /$$__  $$ /$$__  $$|_  $$_/   /$$__  $$ /$$__  $$
+    // | $$  | $$| $$  \ $$|  $$$$$$ | $$  \ $$| $$  \__/  | $$    | $$$$$$$$| $$  | $$
+    // | $$  | $$| $$  | $$ \____  $$| $$  | $$| $$        | $$ /$$| $$_____/| $$  | $$
+    // |  $$$$$$/| $$  | $$ /$$$$$$$/|  $$$$$$/| $$        |  $$$$/|  $$$$$$$|  $$$$$$$
+    //  \______/ |__/  |__/|_______/  \______/ |__/         \___/   \_______/ \_______/
+}
