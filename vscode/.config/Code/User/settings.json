@@ -33,7 +33,7 @@
     //                               |  $$$$$$/                    |  $$$$$$/
     //                                \______/                      \______/
     "python.analysis.autoImportCompletions": true,
-    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.typeCheckingMode": "basic",
     "python.analysis.inlayHints.callArgumentNames": "all",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
@@ -41,6 +41,14 @@
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoSearchPaths": true,
     "python.analysis.gotoDefinitionInStringLiteral": true,
+    "gopls": {
+        "formatting.gofumpt": true
+    },
+    "[go]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+    },
     //  /$$$$$$$$             /$$                                   /$$
     // | $$_____/            | $$                                  |__/
     // | $$       /$$   /$$ /$$$$$$    /$$$$$$  /$$$$$$$   /$$$$$$$ /$$  /$$$$$$  /$$$$$$$   /$$$$$$$
@@ -49,7 +57,7 @@
     // | $$        >$$  $$   | $$ /$$| $$_____/| $$  | $$ \____  $$| $$| $$  | $$| $$  | $$ \____  $$
     // | $$$$$$$$ /$$/\  $$  |  $$$$/|  $$$$$$$| $$  | $$ /$$$$$$$/| $$|  $$$$$$/| $$  | $$ /$$$$$$$/
     // |________/|__/  \__/   \___/   \_______/|__/  |__/|_______/ |__/ \______/ |__/  |__/|_______/
-    "convertToAsciiArt.favoriteFont": "Big Money-ne"
+    "convertToAsciiArt.favoriteFont": "Big Money-ne",
     //  /$$   /$$                                           /$$                     /$$
     // | $$  | $$                                          | $$                    | $$
     // | $$  | $$ /$$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
