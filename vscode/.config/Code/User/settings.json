@@ -21,6 +21,7 @@
         "source.organizeImports": "always"
     },
     "editor.trimAutoWhitespace": true,
+    "files.insertFinalNewline": true,
     //  /$$
     // | $$
     // | $$        /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$
