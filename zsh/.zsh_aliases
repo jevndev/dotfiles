@@ -1,4 +1,5 @@
 alias lg="lazygit"
+alias lzd="lazydocker"
 alias cd="z"
 alias ls="exa -g --oneline --icons --color=always"
 alias la="exa -g --long --all --group --color=always"
