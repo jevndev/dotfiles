@@ -70,6 +70,18 @@
     // |________/|__/  \__/   \___/   \_______/|__/  |__/|_______/ |__/ \______/ |__/  |__/|_______/
     "convertToAsciiArt.favoriteFont": "Big Money-ne",
     "github.copilot.editor.enableAutoCompletions": true,
+    "errorLens.multilineMessage": {
+        "decorationMaxNumberOfLines": 6,
+        "preferFittingMessageMultiplier": 2,
+        "maxColumnForCalculation": 130,
+        "highlightProblemLine": "line",
+        "alignStart": 0,
+        "alignEnd": 0,
+        "margin": 4,
+        "padding": 1,
+        "borderRadius": "",
+        "useFixedPosition": false
+    },
     //  /$$   /$$                                           /$$                     /$$
     // | $$  | $$                                          | $$                    | $$
     // | $$  | $$ /$$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
