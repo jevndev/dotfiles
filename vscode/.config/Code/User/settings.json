@@ -23,6 +23,9 @@
     "editor.trimAutoWhitespace": true,
     "files.insertFinalNewline": true,
     "editor.wrappingStrategy": "advanced",
+    "editor.rulers": [
+        100,
+    ],
     "debug.openDebug": "neverOpen",
     "testing.openTesting": "neverOpen",
     //  /$$
