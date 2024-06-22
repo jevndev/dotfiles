@@ -23,6 +23,8 @@
     "editor.trimAutoWhitespace": true,
     "files.insertFinalNewline": true,
     "editor.wrappingStrategy": "advanced",
+    "debug.openDebug": "neverOpen",
+    "testing.openTesting": "neverOpen",
     //  /$$
     // | $$
     // | $$        /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$
