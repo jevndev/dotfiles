@@ -56,6 +56,10 @@
             "source.organizeImports": "always"
         },
     },
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 100,
+    },
     //  /$$$$$$$$             /$$                                   /$$
     // | $$_____/            | $$                                  |__/
     // | $$       /$$   /$$ /$$$$$$    /$$$$$$  /$$$$$$$   /$$$$$$$ /$$  /$$$$$$  /$$$$$$$   /$$$$$$$
