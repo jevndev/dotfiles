@@ -119,3 +119,4 @@ fi
 if [ -f ~/.path ]; then
     . ~/.path
 fi
+. "$HOME/.cargo/env"
