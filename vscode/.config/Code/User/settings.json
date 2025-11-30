@@ -1,111 +1,142 @@
 {
-    //  /$$$$$$$$       /$$ /$$   /$$
-    // | $$_____/      | $$|__/  | $$
-    // | $$        /$$$$$$$ /$$ /$$$$$$    /$$$$$$   /$$$$$$
-    // | $$$$$    /$$__  $$| $$|_  $$_/   /$$__  $$ /$$__  $$
-    // | $$__/   | $$  | $$| $$  | $$    | $$  \ $$| $$  \__/
-    // | $$      | $$  | $$| $$  | $$ /$$| $$  | $$| $$
-    // | $$$$$$$$|  $$$$$$$| $$  |  $$$$/|  $$$$$$/| $$
-    // |________/ \_______/|__/   \___/   \______/ |__/
-    "workbench.colorTheme": "Dracula Theme Soft",
-    "explorer.confirmDragAndDrop": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "explorer.confirmDelete": false,
-    "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
-    "editor.fontLigatures": true, // => != ===
-    "editor.inlayHints.enabled": "on",
-    "editor.formatOnSave": true,
-    "zenMode.hideLineNumbers": false,
-    "editor.snippetSuggestions": "top",
+  //  /$$$$$$$$       /$$ /$$   /$$
+  // | $$_____/      | $$|__/  | $$
+  // | $$        /$$$$$$$ /$$ /$$$$$$    /$$$$$$   /$$$$$$
+  // | $$$$$    /$$__  $$| $$|_  $$_/   /$$__  $$ /$$__  $$
+  // | $$__/   | $$  | $$| $$  | $$    | $$  \ $$| $$  \__/
+  // | $$      | $$  | $$| $$  | $$ /$$| $$  | $$| $$
+  // | $$$$$$$$|  $$$$$$$| $$  |  $$$$/|  $$$$$$/| $$
+  // |________/ \_______/|__/   \___/   \______/ |__/
+  "workbench.colorTheme": "Dracula Theme Soft",
+  "files.trimTrailingWhitespace": true,
+  "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDelete": false,
+  "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.fontLigatures": true, // => != ===
+  "editor.inlayHints.enabled": "on",
+  "editor.formatOnSave": false,
+  "zenMode.hideLineNumbers": false,
+  "editor.snippetSuggestions": "top",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "editor.trimAutoWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.wrappingStrategy": "advanced",
+  "editor.rulers": [
+    100
+  ],
+  "debug.openDebug": "neverOpen",
+  "testing.openTesting": "neverOpen",
+  //  /$$
+  // | $$
+  // | $$        /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$
+  // | $$       |____  $$| $$__  $$ /$$__  $$| $$  | $$ |____  $$ /$$__  $$ /$$__  $$ /$$_____/
+  // | $$        /$$$$$$$| $$  \ $$| $$  \ $$| $$  | $$  /$$$$$$$| $$  \ $$| $$$$$$$$|  $$$$$$
+  // | $$       /$$__  $$| $$  | $$| $$  | $$| $$  | $$ /$$__  $$| $$  | $$| $$_____/ \____  $$
+  // | $$$$$$$$|  $$$$$$$| $$  | $$|  $$$$$$$|  $$$$$$/|  $$$$$$$|  $$$$$$$|  $$$$$$$ /$$$$$$$/
+  // |________/ \_______/|__/  |__/ \____  $$ \______/  \_______/ \____  $$ \_______/|_______/
+  //                                /$$  \ $$                     /$$  \ $$
+  //                               |  $$$$$$/                    |  $$$$$$/
+  //                                \______/                      \______/
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.gotoDefinitionInStringLiteral": true,
+  "[go]": {
     "editor.codeActionsOnSave": {
-        "source.organizeImports": "always"
-    },
-    "editor.trimAutoWhitespace": true,
-    "files.insertFinalNewline": true,
-    "editor.wrappingStrategy": "advanced",
-    "editor.rulers": [
-        100,
-    ],
-    "debug.openDebug": "neverOpen",
-    "testing.openTesting": "neverOpen",
-    //  /$$
-    // | $$
-    // | $$        /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$
-    // | $$       |____  $$| $$__  $$ /$$__  $$| $$  | $$ |____  $$ /$$__  $$ /$$__  $$ /$$_____/
-    // | $$        /$$$$$$$| $$  \ $$| $$  \ $$| $$  | $$  /$$$$$$$| $$  \ $$| $$$$$$$$|  $$$$$$
-    // | $$       /$$__  $$| $$  | $$| $$  | $$| $$  | $$ /$$__  $$| $$  | $$| $$_____/ \____  $$
-    // | $$$$$$$$|  $$$$$$$| $$  | $$|  $$$$$$$|  $$$$$$/|  $$$$$$$|  $$$$$$$|  $$$$$$$ /$$$$$$$/
-    // |________/ \_______/|__/  |__/ \____  $$ \______/  \_______/ \____  $$ \_______/|_______/
-    //                                /$$  \ $$                     /$$  \ $$
-    //                               |  $$$$$$/                    |  $$$$$$/
-    //                                \______/                      \______/
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.inlayHints.callArgumentNames": "all",
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.inlayHints.variableTypes": true,
-    "python.analysis.autoFormatStrings": true,
-    "python.analysis.autoSearchPaths": true,
-    "python.analysis.gotoDefinitionInStringLiteral": true,
-    "gopls": {
-        "formatting.gofumpt": true
-    },
-    "[go]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "always"
-        },
-    },
-    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
-    "C_Cpp.inlayHints.parameterNames.enabled": true,
-    "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
-    "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": true,
-    "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
-    "C_Cpp.inlayHints.referenceOperator.enabled": true,
-    "C_Cpp.inlayHints.referenceOperator.showSpace": true,
-    "[markdown]": {
-        "editor.wordWrap": "wordWrapColumn",
-        "editor.wordWrapColumn": 100,
-    },
-    //  /$$$$$$$$             /$$                                   /$$
-    // | $$_____/            | $$                                  |__/
-    // | $$       /$$   /$$ /$$$$$$    /$$$$$$  /$$$$$$$   /$$$$$$$ /$$  /$$$$$$  /$$$$$$$   /$$$$$$$
-    // | $$$$$   |  $$ /$$/|_  $$_/   /$$__  $$| $$__  $$ /$$_____/| $$ /$$__  $$| $$__  $$ /$$_____/
-    // | $$__/    \  $$$$/   | $$    | $$$$$$$$| $$  \ $$|  $$$$$$ | $$| $$  \ $$| $$  \ $$|  $$$$$$
-    // | $$        >$$  $$   | $$ /$$| $$_____/| $$  | $$ \____  $$| $$| $$  | $$| $$  | $$ \____  $$
-    // | $$$$$$$$ /$$/\  $$  |  $$$$/|  $$$$$$$| $$  | $$ /$$$$$$$/| $$|  $$$$$$/| $$  | $$ /$$$$$$$/
-    // |________/|__/  \__/   \___/   \_______/|__/  |__/|_______/ |__/ \______/ |__/  |__/|_______/
-    "convertToAsciiArt.favoriteFont": "Big Money-ne",
-    "github.copilot.editor.enableAutoCompletions": true,
-    "errorLens.multilineMessage": {
-        "decorationMaxNumberOfLines": 6,
-        "preferFittingMessageMultiplier": 2,
-        "maxColumnForCalculation": 130,
-        "highlightProblemLine": "line",
-        "alignStart": 0,
-        "alignEnd": 0,
-        "margin": 4,
-        "padding": 1,
-        "borderRadius": "",
-        "useFixedPosition": false
-    },
-    "github.copilot.enable": {
-        "rust": true,
-    },
-    "rust-analyzer.inlayHints.bindingModeHints.enable": true,
-    "rust-analyzer.inlayHints.typeHints.enable": true,
-    "rust-analyzer.inlayHints.parameterHints.enable": true,
-    "rust-analyzer.inlayHints.chainingHints.enable": true,
-    "rust-analyzer.inlayHints.maxLength": 30,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    //  /$$   /$$                                           /$$                     /$$
-    // | $$  | $$                                          | $$                    | $$
-    // | $$  | $$ /$$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
-    // | $$  | $$| $$__  $$ /$$_____/ /$$__  $$ /$$__  $$|_  $$_/   /$$__  $$ /$$__  $$
-    // | $$  | $$| $$  \ $$|  $$$$$$ | $$  \ $$| $$  \__/  | $$    | $$$$$$$$| $$  | $$
-    // | $$  | $$| $$  | $$ \____  $$| $$  | $$| $$        | $$ /$$| $$_____/| $$  | $$
-    // |  $$$$$$/| $$  | $$ /$$$$$$$/|  $$$$$$/| $$        |  $$$$/|  $$$$$$$|  $$$$$$$
-    //  \______/ |__/  |__/|_______/  \______/ |__/         \___/   \_______/ \_______/
+      "source.organizeImports": "always"
+    }
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.clang_format_fallbackStyle": "{ ColumnLimit: 80 }",
+  "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+  "C_Cpp.inlayHints.parameterNames.enabled": true,
+  "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+  "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": true,
+  "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.showSpace": true,
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100
+  },
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.errorSquiggles": "enabled",
+  //  /$$$$$$$$             /$$                                   /$$
+  // | $$_____/            | $$                                  |__/
+  // | $$       /$$   /$$ /$$$$$$    /$$$$$$  /$$$$$$$   /$$$$$$$ /$$  /$$$$$$  /$$$$$$$   /$$$$$$$
+  // | $$$$$   |  $$ /$$/|_  $$_/   /$$__  $$| $$__  $$ /$$_____/| $$ /$$__  $$| $$__  $$ /$$_____/
+  // | $$__/    \  $$$$/   | $$    | $$$$$$$$| $$  \ $$|  $$$$$$ | $$| $$  \ $$| $$  \ $$|  $$$$$$
+  // | $$        >$$  $$   | $$ /$$| $$_____/| $$  | $$ \____  $$| $$| $$  | $$| $$  | $$ \____  $$
+  // | $$$$$$$$ /$$/\  $$  |  $$$$/|  $$$$$$$| $$  | $$ /$$$$$$$/| $$|  $$$$$$/| $$  | $$ /$$$$$$$/
+  // |________/|__/  \__/   \___/   \_______/|__/  |__/|_______/ |__/ \______/ |__/  |__/|_______/
+  "convertToAsciiArt.favoriteFont": "Big Money-ne",
+  "errorLens.multilineMessage": {
+    "decorationMaxNumberOfLines": 6,
+    "preferFittingMessageMultiplier": 2,
+    "maxColumnForCalculation": 130,
+    "highlightProblemLine": "line",
+    "alignStart": 0,
+    "alignEnd": 0,
+    "margin": 4,
+    "padding": 1,
+    "borderRadius": "",
+    "useFixedPosition": false
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "prolog": false,
+    "rust": true,
+    "cpp": false,
+    "c": false,
+    "python": false,
+  },
+  "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "rust-analyzer.inlayHints.parameterHints.enable": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.inlayHints.maxLength": 30,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "terminal.integrated.shellIntegration.history": 0,
+  "terminal.integrated.persistentSessionScrollback": 10000,
+  "testing.automaticallyOpenTestResults": "neverOpen",
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "C_Cpp.default.compilerPath": "/usr/bin/clang++-19",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "workbench.startupEditor": "none",
+  "git.blame.editorDecoration.enabled": false,
+  "errorLens.enabledDiagnosticLevels": [
+    "warning",
+    "info"
+  ]
+  //  /$$   /$$                                           /$$                     /$$
+  // | $$  | $$                                          | $$                    | $$
+  // | $$  | $$ /$$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
+  // | $$  | $$| $$__  $$ /$$_____/ /$$__  $$ /$$__  $$|_  $$_/   /$$__  $$ /$$__  $$
+  // | $$  | $$| $$  \ $$|  $$$$$$ | $$  \ $$| $$  \__/  | $$    | $$$$$$$$| $$  | $$
+  // | $$  | $$| $$  | $$ \____  $$| $$  | $$| $$        | $$ /$$| $$_____/| $$  | $$
+  // |  $$$$$$/| $$  | $$ /$$$$$$$/|  $$$$$$/| $$        |  $$$$/|  $$$$$$$|  $$$$$$$
+  //  \______/ |__/  |__/|_______/  \______/ |__/         \___/   \_______/ \_______/
 }
