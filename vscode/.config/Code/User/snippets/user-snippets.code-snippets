@@ -1,0 +1,9 @@
+{
+	"Insert Line Number": {
+		"prefix": "linenum",
+		"body": [
+			"$TM_LINE_INDEX"
+		],
+		"description": "Insert current line number"
+	}
+}
