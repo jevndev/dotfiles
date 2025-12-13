@@ -1,5 +1,7 @@
 exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 
+output eDP-1 mode 2880x1920@120Hz
+
 set $mod Mod4
 
 set $up l
