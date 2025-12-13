@@ -21,6 +21,10 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "always"
   },
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "block",
   "editor.trimAutoWhitespace": true,
   "files.insertFinalNewline": true,
   "editor.wrappingStrategy": "advanced",
@@ -55,7 +59,7 @@
     }
   },
   "[cpp]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
   "C_Cpp.clang_format_fallbackStyle": "{ ColumnLimit: 80 }",
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
