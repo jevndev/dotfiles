@@ -1,10 +1,9 @@
 exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 
-output eDP-1 mode 2880x1920@120Hz position 0,0
-output eDP-1 bg ~/Pictures/wallpaper/wallpaper.png fill
+exec_always "pkill kanshi; kanshi"
 
-output DP-5 mode 3440x1440@84.957Hz position 0,0
-output DP-5 bg ~/Pictures/wallpaper/wallpaper.png fill
+output eDP-1 bg ~/Pictures/wallpaper/wallpaper.png fill
+output DP-6 bg ~/Pictures/wallpaper/wallpaper.png fill
 
 # Focus ultrawide when connected (fails silently if not connected)
 exec swaymsg focus output DP-5
