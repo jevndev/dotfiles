@@ -10,5 +10,4 @@ profile docked {
 
 profile disabling_eDP1_in_docked_makes_undocked_profile_never_match_so_this_reenables_eDP1_when_nothing_is_matched {
 	output * enable
-	exec swaymsg output eDP-1 enable
 }
