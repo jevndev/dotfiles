@@ -5,7 +5,7 @@ profile undocked {
 
 profile docked {
 	output eDP-1 disable
-	output DP-6 mode 3440x1440@84.957Hz position 0,0
+	output DP-5 mode 3440x1440@84.957Hz position 0,0
 }
 
 profile disabling_eDP1_in_docked_makes_undocked_profile_never_match_so_this_reenables_eDP1_when_nothing_is_matched {
