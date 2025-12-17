@@ -5,8 +5,7 @@ exec_always "pkill kanshi; kanshi"
 output eDP-1 bg ~/Pictures/wallpaper/wallpaper.png fill
 output DP-5 bg ~/Pictures/wallpaper/wallpaper.png fill
 
-# Focus ultrawide when connected (fails silently if not connected)
-exec swaymsg focus output DP-5
+gaps inner 7px
 
 set $mod Mod4
 
