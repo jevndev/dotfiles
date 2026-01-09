@@ -5,5 +5,13 @@
 			"$TM_LINE_INDEX"
 		],
 		"description": "Insert current line number"
+	},
+	"IWYU pragma keep": {
+		"prefix": "IWYU",
+		"body": [
+			"// IWYU pragma: keep"
+		],
+		"description": "Insert IWYU pragma keep comment"
 	}
+	// IWYU pragma: keep:
 }
