@@ -104,3 +104,5 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 bindsym $mod+t exec kitty
+
+default_border pixel 3
