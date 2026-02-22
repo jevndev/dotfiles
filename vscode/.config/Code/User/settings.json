@@ -135,6 +135,18 @@
     "warning",
     "info"
   ]
+  "find-it-faster.findFiles.showPreview": true,
+  "find-it-faster.advanced.disableStartupChecks": true,
+  "find-it-faster.general.useTerminalInEditor": true,
+  "find-it-faster.general.batTheme": "Dracula",
+  "find-it-faster.general.killTerminalAfterUse": true,
+  "task.problemMatchers.neverPrompt": {
+    "shell": true
+  },
+  "clangd.arguments": [
+    "--clang-format-executable=/usr/bin/clang-format"
+  ],
+  "chat.viewSessions.orientation": "stacked"
   //  /$$   /$$                                           /$$                     /$$
   // | $$  | $$                                          | $$                    | $$
   // | $$  | $$ /$$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
