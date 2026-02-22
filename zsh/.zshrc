@@ -123,5 +123,7 @@ if [ -f ~/.config/configure_all.zsh ]; then
     . ~/.config/configure_all.zsh
 fi
 
+export MANPAGER="sh -c 'col -bx | bat -l man -p --paging=always --theme=Dracula'"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
