@@ -4,10 +4,14 @@ alias cd="z"
 alias ls="exa -g --oneline --icons --color=always"
 alias la="exa -g --long --all --group --color=always"
 alias tree="exa -g --tree --color=always"
-alias cat="batcat"
+alias cat="bat"
 alias htop="btop"
 alias cleep="xclip -selection clipboard"
 
 if [ "$TERM" = "xterm-kitty" ]; then
     alias ssh="kitty +kitten ssh"
 fi
+
+
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
