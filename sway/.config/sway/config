@@ -63,10 +63,10 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+v split v
 bindsym $mod+h split h
 
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -l 10 -fn "\"CaskaydiaCove\"-16""
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -l 10 -fn "\"CaskaydiaCove\"-16" -bw 3"
 bindsym $mod+Shift+q kill
 
-bindsym $mod+Escape exec "case $(echo 'Power\nSleep\nRestart' | dmenu -i -l 10 -fn '\"CaskaydiaCove\"-16') in Power) systemctl poweroff ;; Sleep) systemctl suspend ;; Restart) systemctl reboot ;; esac"
+bindsym $mod+Escape exec "case $(echo 'Power\nSleep\nRestart' | dmenu -i -l 10 -fn '\"CaskaydiaCove\"-16' -bw 3) in Power) systemctl poweroff ;; Sleep) systemctl suspend ;; Restart) systemctl reboot ;; esac"
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
