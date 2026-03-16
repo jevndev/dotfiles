@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+from evdev import InputDevice, UInput, ecodes, list_devices
+import signal
+import sys
+
+TARGET_NAMES = [
+    "IPTSD Virtual Stylus",
+    "Intel Touch Host Controller Stylus",
+]
+
+def find_stylus():
+    for path in list_devices():
+        dev = InputDevice(path)
+        if any(name in dev.name for name in TARGET_NAMES):
+            return dev
+    return None
+
+dev = find_stylus()
+if dev is None:
+    print("Could not find stylus device. Available devices:")
+    for path in list_devices():
+        d = InputDevice(path)
+        print(f"  {path}: {d.name}")
+    sys.exit(1)
+
+print(f"Using stylus device: {dev.path} ({dev.name})")
+
+ui = UInput({ecodes.EV_KEY: [ecodes.KEY_F20]}, name="stylus-eraser-f20", version=0x3)
+eraser_active = False
+
+def release_and_exit(*_):
+    global eraser_active
+    if eraser_active:
+        ui.write(ecodes.EV_KEY, ecodes.KEY_F20, 0)
+        ui.syn()
+    ui.close()
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, release_and_exit)
+signal.signal(signal.SIGTERM, release_and_exit)
+
+# We react to tool changes:
+# BTN_TOOL_RUBBER -> eraser tool in proximity
+# BTN_TOOL_PEN    -> pen tip tool in proximity
+for event in dev.read_loop():
+    if event.type != ecodes.EV_KEY:
+        continue
+
+    if event.code == ecodes.BTN_TOOL_RUBBER:
+        if event.value == 1 and not eraser_active:
+            ui.write(ecodes.EV_KEY, ecodes.KEY_F20, 1)
+            ui.syn()
+            eraser_active = True
+            print("Eraser ON -> F20 down")
+        elif event.value == 0 and eraser_active:
+            ui.write(ecodes.EV_KEY, ecodes.KEY_F20, 0)
+            ui.syn()
+            eraser_active = False
+            print("Eraser OFF -> F20 up")
+
+    elif event.code == ecodes.BTN_TOOL_PEN:
+        # If pen comes into proximity, ensure F20 is up.
+        if event.value == 1 and eraser_active:
+            ui.write(ecodes.EV_KEY, ecodes.KEY_F20, 0)
+            ui.syn()
+            eraser_active = False
+            print("Pen ON -> F20 up")

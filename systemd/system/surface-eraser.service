@@ -1,0 +1,12 @@
+[Unit]
+Description=surface_eraser
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/jevndev/.dotfiles/scripts/.scripts/surface_eraser
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
