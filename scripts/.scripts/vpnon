@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+wg-quick up ~/.vpn/Laptop.conf
