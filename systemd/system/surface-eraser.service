@@ -8,5 +8,18 @@ ExecStart=/usr/bin/python3 /home/jevndev/.dotfiles/scripts/.scripts/surface_eras
 Restart=on-failure
 RestartSec=2
 
+# Security hardening (compatible with device access)
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+UMask=0077
+	StandardOutput=null
+	StandardError=null
+	TimeoutStopSec=10
+
 [Install]
 WantedBy=multi-user.target
