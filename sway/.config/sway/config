@@ -2,7 +2,9 @@ exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPL
 
 exec_always "pkill kanshi; kanshi"
 
-output eDP-1 bg ~/Pictures/wallpaper/wallpaper.png fill
+set $laptop_output eDP-1
+
+output $laptop_output bg ~/Pictures/wallpaper/wallpaper.png fill
 output DP-5 bg ~/Pictures/wallpaper/wallpaper.png fill
 
 gaps inner 7px
@@ -112,7 +114,14 @@ mode "resize" {
         bindsym Mod1+r mode "default"
 }
 
+# Tablet mode: gyroscope-based autorotation on the internal display.
+mode "tablet" {
+        bindsym Escape exec --no-startup-id ~/.dotfiles/scripts/.scripts/sway_tablet_autorotate stop; output $laptop_output transform normal; mode "default"
+        bindsym Return exec --no-startup-id ~/.dotfiles/scripts/.scripts/sway_tablet_autorotate stop; output $laptop_output transform normal; mode "default"
+}
+
 bindsym $mod+r mode "resize"
+bindsym $mod+Shift+t exec --no-startup-id ~/.dotfiles/scripts/.scripts/sway_tablet_autorotate start $laptop_output; mode "tablet"
 bindsym $mod+t exec kitty
 
 default_border pixel 3
