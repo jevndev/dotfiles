@@ -118,6 +118,7 @@ mode "resize" {
 mode "tablet" {
         bindsym Escape exec --no-startup-id ~/.dotfiles/scripts/.scripts/sway_tablet_autorotate stop; output $laptop_output transform normal; mode "default"
         bindsym Return exec --no-startup-id ~/.dotfiles/scripts/.scripts/sway_tablet_autorotate stop; output $laptop_output transform normal; mode "default"
+        bindsym $mod+Shift+s exec sh -c 'mkdir -p "$HOME/Pictures/Screenshots" && grim -g "$(slurp)" "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H-%M-%S").png"'
 }
 
 bindsym $mod+r mode "resize"

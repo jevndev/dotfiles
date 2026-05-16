@@ -5,6 +5,39 @@ PIDFILE="${XDG_RUNTIME_DIR:-/tmp}/sway-tablet-autorotate.pid"
 OUTPUT="${2:-eDP-1}"
 CMD="${1:-start}"
 
+apply_transform() {
+    local transform="$1"
+    local matrix=""
+
+    case "$transform" in
+        normal)
+            matrix="1 0 0 0 1 0"
+            ;;
+        90)
+            matrix="0 1 0 -1 0 1"
+            ;;
+        180)
+            matrix="-1 0 1 0 -1 1"
+            ;;
+        270)
+            matrix="0 -1 1 1 0 0"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+
+    swaymsg output "$OUTPUT" transform "$transform" >/dev/null
+
+    # Touchscreens and stylus tools need explicit remap in tablet orientation.
+    swaymsg input type:touch map_to_output "$OUTPUT" >/dev/null || true
+    swaymsg input type:tablet_tool map_to_output "$OUTPUT" >/dev/null || true
+
+    # Some devices expose calibration support on non-touch types too.
+    swaymsg input type:touch calibration_matrix $matrix >/dev/null || true
+    swaymsg input type:tablet_tool calibration_matrix $matrix >/dev/null || true
+}
+
 start() {
     if [[ -f "$PIDFILE" ]]; then
         local existing_pid
@@ -45,7 +78,7 @@ start() {
                         ;;
                 esac
 
-                swaymsg output "$OUTPUT" transform "$transform" >/dev/null
+                apply_transform "$transform"
                 ;;
         esac
     done
@@ -60,6 +93,8 @@ stop() {
         fi
         rm -f "$PIDFILE"
     fi
+
+    apply_transform "normal" || true
 }
 
 case "$CMD" in
