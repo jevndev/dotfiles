@@ -121,6 +121,8 @@ mode "tablet" {
         bindsym $mod+Shift+s exec sh -c 'mkdir -p "$HOME/Pictures/Screenshots" && grim -g "$(slurp)" "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H-%M-%S").png"'
 }
 
+bindsym $mod+y exec sh -c 'mkdir -p "$HOME/Pictures/Screenshots" && grim -g "$(slurp)" "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H-%M-%S").png"'
+
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+t exec --no-startup-id ~/.dotfiles/scripts/.scripts/sway_tablet_autorotate start $laptop_output; mode "tablet"
 bindsym $mod+t exec kitty
