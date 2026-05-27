@@ -1,0 +1,81 @@
+#! /usr/bin/python
+
+import os
+import sys
+
+from dbus_next.aio.message_bus import MessageBus
+from dbus_next.constants import BusType
+import asyncio
+import dataclasses
+
+BLUEZ_BUS_NAME = "org.bluez"
+BLUEZ_PATH_ROOT = "/org/bluez/hci0/dev_"
+
+BATTERY_UUID         = "0000180f-0000-1000-8000-00805f9b34fb"
+BATTERY_LEVEL_UUID   = "00002a19-0000-1000-8000-00805f9b34fb"
+BATTERY_USER_DESC    = "00002901-0000-1000-8000-00805f9b34fb"
+
+@dataclasses.dataclass
+class BoardState:
+    left_battery: int | None = None
+    right_battery: int | None = None
+
+async def get_keyboard_state(keyboard_mac: str) -> BoardState:
+    full_path = BLUEZ_PATH_ROOT + keyboard_mac.replace(":", "_")
+    bus = await MessageBus(bus_type=BusType.SYSTEM).connect()
+    introspection = await bus.introspect(BLUEZ_BUS_NAME, full_path)
+    device = bus.get_proxy_object(BLUEZ_BUS_NAME, full_path, introspection)
+
+    async def get_interface(path: str, interface_name: str):
+        path_introspection = await bus.introspect(BLUEZ_BUS_NAME, path)
+        proxy = bus.get_proxy_object(BLUEZ_BUS_NAME, path, path_introspection)
+        return proxy, proxy.get_interface(interface_name)
+
+    keyboard_state = BoardState()
+
+    for svc in device.child_paths:
+        svc_proxy, svc_intf = await get_interface(svc, "org.bluez.GattService1")
+        if BATTERY_UUID != await svc_intf.get_uuid():
+            continue
+
+        is_peripheral_board = False
+        level: int | None = None
+
+        for char in svc_proxy.child_paths:
+            char_proxy, char_intf = await get_interface(char, "org.bluez.GattCharacteristic1")
+            if BATTERY_LEVEL_UUID != await char_intf.get_uuid():
+                continue
+
+            level = int.from_bytes(await char_intf.call_read_value({}), byteorder="little")
+
+            for desc in char_proxy.child_paths:
+                _, desc_intf = await get_interface(desc, "org.bluez.GattDescriptor1")
+                if BATTERY_USER_DESC == await desc_intf.get_uuid():
+                    is_peripheral_board = True
+                    break
+
+        if is_peripheral_board:
+            keyboard_state.right_battery = level
+        else:
+            keyboard_state.left_battery = level
+
+    return keyboard_state
+
+
+async def amain() -> None:
+    MAC_ADDR_KEY = "KEYBOARD_MAC_ADDRESS"
+
+    keyboard_mac_address = os.getenv(MAC_ADDR_KEY, None)
+
+    if keyboard_mac_address is None:
+        print(f"Missing environment variable {MAC_ADDR_KEY}", file = sys.stderr)
+        sys.exit(1)
+
+    keyboard_state = await get_keyboard_state(keyboard_mac_address)
+    print(f"{keyboard_state.left_battery or '??'}%  {keyboard_state.right_battery or '??'}%")
+
+def main():
+    asyncio.new_event_loop().run_until_complete(amain())
+
+if __name__ == "__main__":
+    main()
