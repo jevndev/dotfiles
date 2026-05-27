@@ -33,6 +33,9 @@
   ],
   "debug.openDebug": "neverOpen",
   "testing.openTesting": "neverOpen",
+  "chat.tools.terminal.terminalProfile.linux": {
+    "path": "/usr/bin/bash"
+  },
   //  /$$
   // | $$
   // | $$        /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$
