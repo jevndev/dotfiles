@@ -125,5 +125,11 @@ fi
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging=always --theme=Dracula'"
 
+if [ -f ~/.secrets ]; then
+    set -a
+    source ~/.secrets
+    set +a
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
