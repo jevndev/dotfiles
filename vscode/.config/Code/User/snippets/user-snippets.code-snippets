@@ -12,6 +12,5 @@
 			"// IWYU pragma: keep"
 		],
 		"description": "Insert IWYU pragma keep comment"
-	}
-	// IWYU pragma: keep:
+	},
 }
